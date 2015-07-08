@@ -1,0 +1,17 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="ApplicationDBModelStoreContainer" CdmEntityContainer="ApplicationDBEntities">
+    <EntitySetMapping Name="OrderManagers">
+      <EntityTypeMapping TypeName="ApplicationDBModel.OrderManager">
+        <MappingFragment StoreEntitySet="OrderManager">
+          <ScalarProperty Name="OrderId" ColumnName="OrderId" />
+          <ScalarProperty Name="CustomerName" ColumnName="CustomerName" />
+          <ScalarProperty Name="CustomerMobileNo" ColumnName="CustomerMobileNo" />
+          <ScalarProperty Name="OrderedItem" ColumnName="OrderedItem" />
+          <ScalarProperty Name="OrderedQuantity" ColumnName="OrderedQuantity" />
+          <ScalarProperty Name="SalesAgentName" ColumnName="SalesAgentName" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

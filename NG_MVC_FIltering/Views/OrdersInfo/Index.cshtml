@@ -1,0 +1,56 @@
+﻿
+@{
+    ViewBag.Title = "Index";
+}
+
+<link href="~/Content/bootstrap.min.css" rel="stylesheet" />
+<link href="~/Content/bootstrap-theme.min.css" rel="stylesheet" />
+<script src="~/Scripts/jquery-2.1.4.min.js"></script>
+<script src="~/Scripts/bootstrap.min.js"></script>
+<script src="~/Scripts/angular.min.js"></script>
+<script src="~/Scripts/MyScripts/Logic.js"></script>
+
+<h1>Orders View</h1>
+<div ng-app="ngmodule">
+    <div ng-controller="ngcontroller">
+        <table class="table table-bordered table-condensed">
+            <tr>
+                <td>Search By:</td>
+                <td>
+                    <select ng-model="SelectedCriteria" ng-options="S for S in Selectors">
+                    </select>
+                </td>
+                <td>Enter Search Value:</td>
+                <td>
+                    <input type="text" ng-model="filterValue" class="form-control" ng-change="getFilteredData()" />
+                </td>
+            </tr>
+        </table>
+        <table class="table table-bordered table-condensed table-striped">
+            <thead>
+                <tr>
+                    <th>OrderId</th>
+                    <th>Customer Name</th>
+                    <th>Contact No</th>
+                    <th>Ordered Item</th>
+                    <th>Quantity</th>
+                    <th>Sales Agent Name</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr ng-repeat="order in Orders">
+                    <td>{{order.OrderId}}</td>
+                    <td>{{order.CustomerName}}</td>
+                    <td>{{order.CustomerMobileNo}}</td>
+                    <td>{{order.OrderedItem}}</td>
+                    <td>{{order.OrderedQuantity}}</td>
+                    <td>{{order.SalesAgentName}}</td>
+                </tr>
+            </tbody>
+        </table>
+        <span>{{Message}}</span>
+    </div>
+    
+</div>
+
+
